@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CosDoc | 프로젝트 스크린샷</title>
+    <meta
+      name="description"
+      content="CosDoc 프로젝트의 주요 기능과 화면을 정리한 스크린샷 페이지입니다."
+    />
+    <style>
+      :root {
+        --bg: #f5f7fb;
+        --card: #ffffff;
+        --text: #1f2430;
+        --muted: #6b7280;
+        --primary: #2b2f55;
+        --accent: #6c63ff;
+        --border: #e5e7eb;
+        --shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+        --radius: 20px;
+        --max-width: 1180px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: #fff;
+      }
+
+      .container {
+        width: min(var(--max-width), calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .hero {
+        background:
+          linear-gradient(
+            135deg,
+            rgba(43, 47, 85, 0.96),
+            rgba(108, 99, 255, 0.88)
+          ),
+          url("images/bg_1.jpg") center/cover no-repeat;
+        color: #fff;
+        padding: 88px 0 72px;
+      }
+
+      .hero-inner {
+        max-width: 860px;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        margin: 0 0 16px;
+        font-size: clamp(34px, 5vw, 54px);
+        line-height: 1.15;
+        letter-spacing: -0.03em;
+      }
+
+      .hero p {
+        margin: 0;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.88);
+      }
+
+      .hero-actions {
+        margin-top: 28px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 13px 18px;
+        border-radius: 12px;
+        font-weight: 700;
+        transition: 0.2s ease;
+        border: 1px solid transparent;
+      }
+
+      .btn-primary {
+        background: #fff;
+        color: var(--primary);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn-outline {
+        border-color: rgba(255, 255, 255, 0.35);
+        color: #fff;
+        background: transparent;
+      }
+
+      .btn-outline:hover {
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .section-header {
+        margin-bottom: 28px;
+      }
+
+      .section-title {
+        margin: 0 0 10px;
+        font-size: clamp(28px, 4vw, 38px);
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+      }
+
+      .section-desc {
+        margin: 0;
+        color: var(--muted);
+        font-size: 17px;
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 32px;
+      }
+
+      .summary-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 24px;
+      }
+
+      .summary-card h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+
+      .summary-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .feature-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .feature-item {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 18px 20px;
+        font-weight: 600;
+        color: #374151;
+        box-shadow: var(--shadow);
+      }
+
+      .gallery {
+        display: grid;
+        gap: 24px;
+        margin-top: 30px;
+      }
+
+      .shot-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .shot-content {
+        padding: 24px;
+      }
+
+      .shot-kicker {
+        display: inline-block;
+        margin-bottom: 10px;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: #eef2ff;
+        color: #4338ca;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .shot-title {
+        margin: 0 0 8px;
+        font-size: clamp(24px, 3vw, 32px);
+        line-height: 1.25;
+        letter-spacing: -0.02em;
+      }
+
+      .shot-desc {
+        margin: 0 0 18px;
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .shot-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: #f3f4f6;
+        color: #4b5563;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .two-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+
+      .single-shot img,
+      .two-grid img {
+        width: 100%;
+      }
+
+      .caption {
+        margin-top: 10px;
+        font-size: 14px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .toc {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(12px);
+        background: rgba(245, 247, 251, 0.85);
+        border-bottom: 1px solid rgba(229, 231, 235, 0.9);
+      }
+
+      .toc-inner {
+        width: min(var(--max-width), calc(100% - 32px));
+        margin: 0 auto;
+        display: flex;
+        gap: 12px;
+        padding: 14px 0;
+        overflow-x: auto;
+      }
+
+      .toc a {
+        white-space: nowrap;
+        font-size: 14px;
+        font-weight: 700;
+        color: #4b5563;
+        background: #fff;
+        border: 1px solid var(--border);
+        padding: 10px 14px;
+        border-radius: 999px;
+      }
+
+      .footer {
+        padding: 40px 0 60px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 960px) {
+        .summary-grid,
+        .feature-list,
+        .two-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding: 72px 0 56px;
+        }
+
+        .shot-content {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <span class="badge">SSAFY 팀 프로젝트</span>
+          <h1>CosDoc</h1>
+          <p>
+            화장품 수출 중소기업을 위한 수출 프로세스 관리 서비스입니다.
+            프로젝트 단위의 협업, 단계별 서류 관리, AI 문서 생성 및 검증, WebRTC
+            화상회의 기능을 통해 복잡한 수출 실무를 하나의 서비스에서 관리할 수
+            있도록 구현했습니다.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="index.html#projects-section"
+              >포트폴리오로 돌아가기</a
+            >
+            <a class="btn btn-outline" href="#screens">스크린샷 보기</a>
+          </div>
+        </div>
+
+        <div class="summary-grid">
+          <div class="summary-card">
+            <h3>핵심 목표</h3>
+            <p>
+              복잡한 화장품 수출 절차를 프로젝트 단위로 통합 관리할 수 있는 협업
+              플랫폼 구현
+            </p>
+          </div>
+          <div class="summary-card">
+            <h3>주요 기술</h3>
+            <p>Java, Spring Boot, React, TypeScript, MySQL, WebRTC, Docker</p>
+          </div>
+          <div class="summary-card">
+            <h3>주요 기능</h3>
+            <p>
+              체크리스트, 템플릿 문서 생성, AI 문서 생성·재생성, 화상회의 및
+              실시간 채팅
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="toc">
+      <div class="toc-inner">
+        <a href="#overview">프로젝트 개요</a>
+        <a href="#login">로그인</a>
+        <a href="#dashboard">대시보드</a>
+        <a href="#checklist">체크리스트</a>
+        <a href="#template-doc">템플릿 문서 생성</a>
+        <a href="#ai-doc">AI 문서 생성</a>
+        <a href="#meeting">화상회의</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="section" id="overview">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">프로젝트 개요</h2>
+            <p class="section-desc">
+              CosDoc은 수출 프로젝트의 진행 상황과 문서를 단계별로 관리하고,
+              AI와 화상회의 기능을 통해 바이어와의 협업 효율을 높이는
+              서비스입니다.
+            </p>
+          </div>
+
+          <div class="feature-list">
+            <div class="feature-item">🔐 사원 / 게스트 로그인 및 회원가입</div>
+            <div class="feature-item">
+              🏢 기업 대시보드와 프로젝트 목록 관리
+            </div>
+            <div class="feature-item">
+              📁 단계별 체크리스트 및 문서 상태 관리
+            </div>
+            <div class="feature-item">📝 템플릿 기반 서류 입력 및 생성</div>
+            <div class="feature-item">
+              🤖 회의 요약 기반 AI 서류 생성 및 피드백 재생성
+            </div>
+            <div class="feature-item">
+              🎥 WebRTC 화상회의, 채팅, 실시간 통번역
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="screens">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">주요 화면</h2>
+            <p class="section-desc">
+              서비스 흐름을 이해할 수 있도록 핵심 기능 중심으로 화면을
+              정리했습니다.
+            </p>
+          </div>
+
+          <div class="gallery">
+            <article class="shot-card" id="login">
+              <div class="shot-content">
+                <span class="shot-kicker">🔐 로그인 / 회원가입</span>
+                <h3 class="shot-title">사원과 게스트를 구분한 로그인 화면</h3>
+                <p class="shot-desc">
+                  사용자 유형에 따라 필요한 입력 항목을 구분해 접근 흐름을
+                  설계했습니다. 게스트 사용자는 초대코드를 통해 프로젝트에
+                  참여할 수 있습니다.
+                </p>
+                <div class="shot-tags">
+                  <span class="tag">사원 로그인</span>
+                  <span class="tag">게스트 로그인</span>
+                  <span class="tag">초대코드 기반 접근</span>
+                </div>
+
+                <div class="two-grid">
+                  <div>
+                    <img
+                      src="images/cosdoc/login-employee.png"
+                      alt="CosDoc 사원 로그인 화면"
+                    />
+                    <p class="caption">사원 로그인 화면</p>
+                  </div>
+                  <div>
+                    <img
+                      src="images/cosdoc/login-guest.png"
+                      alt="CosDoc 게스트 로그인 화면"
+                    />
+                    <p class="caption">게스트 로그인 화면</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="shot-card" id="dashboard">
+              <div class="shot-content">
+                <span class="shot-kicker">🏢 기업 메인 페이지</span>
+                <h3 class="shot-title">
+                  프로젝트 현황을 한눈에 보는 기업 대시보드
+                </h3>
+                <p class="shot-desc">
+                  기업 사용자가 진행 중인 프로젝트를 빠르게 확인하고 새
+                  프로젝트를 생성할 수 있도록 대시보드 구조를 구성했습니다.
+                </p>
+                <div class="shot-tags">
+                  <span class="tag">프로젝트 목록</span>
+                  <span class="tag">검색</span>
+                  <span class="tag">프로젝트 생성</span>
+                </div>
+
+                <div class="single-shot">
+                  <img
+                    src="images/cosdoc/dashboard.png"
+                    alt="CosDoc 기업 대시보드 화면"
+                  />
+                  <p class="caption">기업 대시보드 화면</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="shot-card" id="checklist">
+              <div class="shot-content">
+                <span class="shot-kicker">📁 프로젝트 상세 / 체크리스트</span>
+                <h3 class="shot-title">
+                  수출 단계별 진행 상태와 필요 문서를 관리하는 체크리스트
+                </h3>
+                <p class="shot-desc">
+                  프로젝트 상세 페이지에서 현재 진행 단계와 단계별 필요 문서
+                  목록을 확인할 수 있으며, 문서 제출 여부와 AI 검증 기능을 함께
+                  제공해 실무 흐름에 맞는 관리가 가능하도록 했습니다.
+                </p>
+                <div class="shot-tags">
+                  <span class="tag">Process Status</span>
+                  <span class="tag">문서 상태 표시</span>
+                  <span class="tag">AI 검증</span>
+                </div>
+
+                <div class="single-shot">
+                  <img
+                    src="images/cosdoc/project-detail.png"
+                    alt="CosDoc 프로젝트 상세 및 체크리스트 화면"
+                  />
+                  <p class="caption">프로젝트 상세 및 체크리스트 화면</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="shot-card" id="template-doc">
+              <div class="shot-content">
+                <span class="shot-kicker">📝 템플릿 기반 서류 생성</span>
+                <h3 class="shot-title">
+                  정형 문서를 빠르게 작성할 수 있는 입력 폼과 미리보기
+                </h3>
+                <p class="shot-desc">
+                  템플릿 기반으로 필요한 값을 입력하면 문서 생성을 위한 입력
+                  흐름을 단순화할 수 있도록 설계했습니다. 미리보기 영역을 함께
+                  제공해 작성 결과를 바로 확인할 수 있습니다.
+                </p>
+                <div class="shot-tags">
+                  <span class="tag">입력 폼</span>
+                  <span class="tag">자동완성 데이터</span>
+                  <span class="tag">미리보기</span>
+                </div>
+
+                <div class="single-shot">
+                  <img
+                    src="images/cosdoc/template-doc.png"
+                    alt="CosDoc 템플릿 기반 서류 생성 화면"
+                  />
+                  <p class="caption">템플릿 기반 서류 생성 화면</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="shot-card" id="ai-doc">
+              <div class="shot-content">
+                <span class="shot-kicker">🤖 AI 서류 생성</span>
+                <h3 class="shot-title">
+                  회의 요약과 사용자 요청사항을 반영한 AI 문서 생성
+                </h3>
+                <p class="shot-desc">
+                  선택한 회의의 요약 정보와 사용자의 요청사항을 기반으로 문서를
+                  자동 생성하고, 생성된 초안은 피드백 모달을 통해 수정 요청과
+                  재생성이 가능하도록 구현했습니다.
+                </p>
+                <div class="shot-tags">
+                  <span class="tag">AI 생성 요청</span>
+                  <span class="tag">회의 요약 기반 작성</span>
+                  <span class="tag">피드백 재생성</span>
+                </div>
+
+                <div class="two-grid">
+                  <div>
+                    <img
+                      src="images/cosdoc/ai-doc.png"
+                      alt="CosDoc AI 문서 생성 화면"
+                    />
+                    <p class="caption">AI 문서 생성 화면</p>
+                  </div>
+                  <div>
+                    <img
+                      src="images/cosdoc/ai-feedback.png"
+                      alt="CosDoc AI 피드백 및 재생성 모달"
+                    />
+                    <p class="caption">AI 피드백 및 재생성 모달</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="shot-card" id="meeting">
+              <div class="shot-content">
+                <span class="shot-kicker">🎥 화상회의 및 협업</span>
+                <h3 class="shot-title">
+                  WebRTC 기반 화상회의, 채팅, 실시간 통번역
+                </h3>
+                <p class="shot-desc">
+                  다자간 영상 회의와 채팅을 제공하고, 협업 과정에서 실시간 번역
+                  기능을 통해 해외 바이어와의 소통 편의성을 높일 수 있도록
+                  구성했습니다.
+                </p>
+                <div class="shot-tags">
+                  <span class="tag">WebRTC</span>
+                  <span class="tag">실시간 채팅</span>
+                  <span class="tag">통번역</span>
+                </div>
+
+                <div class="single-shot">
+                  <img
+                    src="images/cosdoc/meeting.png"
+                    alt="CosDoc 화상회의 및 채팅 화면"
+                  />
+                  <p class="caption">화상회의 및 실시간 채팅 화면</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 박솔희 Portfolio - CosDoc Project Screens</p>
+      </div>
+    </footer>
+  </body>
+</html>
