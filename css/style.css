@@ -8637,6 +8637,30 @@ h1, h2, h3, h4, h5,
     width: 100%;
     position: relative;
     z-index: 1; }
+  .ftco-about .img-about .img.profile-photo {
+    min-height: 560px;
+    background-size: 68%;
+    background-repeat: no-repeat;
+    background-position: center 20%; }
+
+#about-section.ftco-about {
+  padding-top: 110px !important; }
+
+@media (max-width: 991.98px) {
+  #about-section.ftco-about {
+    padding-top: 72px !important; }
+  .ftco-about .img-about .img.profile-photo {
+    min-height: 460px;
+    background-size: 64%;
+    background-position: center 16%; } }
+
+@media (max-width: 767.98px) {
+  #about-section.ftco-about {
+    padding-top: 48px !important; }
+  .ftco-about .img-about .img.profile-photo {
+    min-height: 360px;
+    background-size: 58%;
+    background-position: center 14%; } }
 
 .ftco-about ul.about-info {
   display: inline-block;
@@ -8996,6 +9020,12 @@ h1, h2, h3, h4, h5,
       letter-spacing: 2px;
       font-size: 12px;
       font-weight: 600; }
+    .project .text .project-period {
+      display: block;
+      margin-bottom: 10px;
+      color: rgba(255, 255, 255, 0.85);
+      letter-spacing: .08em;
+      font-size: 13px; }
     @media (max-width: 767.98px) {
       .project .text {
         opacity: 1; }
