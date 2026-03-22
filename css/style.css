@@ -8639,7 +8639,7 @@ h1, h2, h3, h4, h5,
     z-index: 1; }
   .ftco-about .img-about .img.profile-photo {
     min-height: 560px;
-    background-size: 68%;
+    background-size: 55%;
     background-repeat: no-repeat;
     background-position: center 20%; }
 
@@ -8651,7 +8651,7 @@ h1, h2, h3, h4, h5,
     padding-top: 72px !important; }
   .ftco-about .img-about .img.profile-photo {
     min-height: 460px;
-    background-size: 64%;
+    background-size: 52%;
     background-position: center 16%; } }
 
 @media (max-width: 767.98px) {
@@ -8659,7 +8659,7 @@ h1, h2, h3, h4, h5,
     padding-top: 48px !important; }
   .ftco-about .img-about .img.profile-photo {
     min-height: 360px;
-    background-size: 58%;
+    background-size: 48%;
     background-position: center 14%; } }
 
 .ftco-about ul.about-info {
