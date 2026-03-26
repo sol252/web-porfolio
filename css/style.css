@@ -217,12 +217,6 @@ select {
 select {
   word-wrap: normal; }
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button; }
-
 button:not(:disabled),
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
@@ -241,12 +235,6 @@ input[type="checkbox"] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0; }
-
-input[type="date"],
-input[type="time"],
-input[type="datetime-local"],
-input[type="month"] {
-  -webkit-appearance: listbox; }
 
 textarea {
   overflow: auto;
@@ -285,7 +273,7 @@ progress {
 
 ::-webkit-file-upload-button {
   font: inherit;
-  -webkit-appearance: button; }
+}
 
 output {
   display: inline-block; }
@@ -6320,7 +6308,6 @@ display: inline-flex !important; } }
   position: fixed !important; }
 
 .position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important; }
 
 .fixed-top {
@@ -6337,9 +6324,8 @@ display: inline-flex !important; } }
   left: 0;
   z-index: 1030; }
 
-@supports ((position: -webkit-sticky) or (position: sticky)) {
+@supports (position: sticky) {
   .sticky-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020; } }
@@ -8582,7 +8568,6 @@ h1, h2, h3, h4, h5,
 
 #navi {
   top: 180px;
-  position: -webkit-sticky;
   position: sticky;
   margin: 0; }
   #navi ul {
@@ -9143,8 +9128,6 @@ textarea.form-control {
   background-position: center center; }
 
 .image-popup {
-  cursor: -webkit-zoom-in;
-  cursor: -moz-zoom-in;
   cursor: zoom-in; }
 
 .mfp-with-zoom .mfp-container,
