@@ -272,6 +272,12 @@
         gap: 18px;
       }
 
+      .triple-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
       .single-shot img,
       .two-grid img {
         width: 100%;
@@ -291,6 +297,10 @@
           radial-gradient(circle at top, rgba(77, 183, 255, 0.16), transparent 48%),
           linear-gradient(135deg, #f7fbff, #edf7ff);
         text-align: center;
+      }
+
+      .placeholder-shot.compact {
+        min-height: 240px;
       }
 
       .placeholder-shot strong {
@@ -319,6 +329,18 @@
         font-size: 14px;
         color: var(--muted);
         text-align: center;
+      }
+
+      .guide-group + .guide-group {
+        margin-top: 24px;
+      }
+
+      .guide-subtitle {
+        margin: 0 0 14px;
+        font-size: 18px;
+        font-weight: 800;
+        color: var(--primary);
+        letter-spacing: -0.02em;
       }
 
       .toc {
@@ -361,7 +383,8 @@
         .summary-grid,
         .feature-list,
         .two-grid,
-        .quad-grid {
+        .quad-grid,
+        .triple-grid {
           grid-template-columns: 1fr;
         }
 
@@ -512,7 +535,7 @@
                   >
                     <strong>이미지 준비 중</strong>
                     <span>메인 대시보드 화면을 여기에 추가할 수 있습니다.</span>
-                    <code>images/bubble-pop-up/dashboard.gif</code>
+                    <code>images/bubble-pop-up/dashboard.png</code>
                   </div>
                   <p class="caption">메인 대시보드 화면</p>
                 </div>
@@ -644,61 +667,143 @@
                 </h3>
                 <p class="shot-desc">
                   프론트엔드 튜토리얼에 들어 있는 설명 화면을 캡처해 넣기 쉽도록
-                  영업 중 UI를 세부 영역으로 분리했습니다. 이 구간은 움직이는 GIF
-                  대신 정적인 PNG 또는 JPG 캡처를 넣는 용도로 구성했습니다.
+                  영업 중 UI를 세부 영역으로 분리했습니다. 헤더는 left, mid,
+                  right 3장 PNG로 나누고, 실시간 랭킹과 이벤트 알림은 정적
+                  캡처로, 액션 설명은 5개 액션별 GIF로 정리할 수 있게
+                  구성했습니다.
                 </p>
                 <div class="shot-tags">
-                  <span class="tag">헤더 설명</span>
-                  <span class="tag">실시간 랭킹</span>
-                  <span class="tag">이벤트 알림</span>
-                  <span class="tag">액션 설명</span>
-                  <span class="tag">정적 캡처 PNG/JPG</span>
+                  <span class="tag">헤더 3분할 PNG</span>
+                  <span class="tag">실시간 랭킹 PNG</span>
+                  <span class="tag">이벤트 알림 PNG</span>
+                  <span class="tag">액션별 GIF</span>
                 </div>
 
-                <div class="quad-grid">
-                  <div>
-                    <div
-                      class="placeholder-shot"
-                      aria-label="Bubble POP-UP 영업 헤더 설명 이미지 자리"
-                    >
-                      <strong>이미지 준비 중</strong>
-                      <span>영업 헤더 설명 캡처를 여기에 추가할 수 있습니다.</span>
-                      <code>images/bubble-pop-up/play-header.png</code>
+                <div class="guide-group">
+                  <h4 class="guide-subtitle">헤더 3분할 캡처</h4>
+                  <div class="triple-grid">
+                    <div>
+                      <div
+                        class="placeholder-shot compact"
+                        aria-label="Bubble POP-UP 영업 헤더 왼쪽 이미지 자리"
+                      >
+                        <strong>이미지 준비 중</strong>
+                        <span>헤더 왼쪽 영역 캡처를 여기에 추가할 수 있습니다.</span>
+                        <code>images/bubble-pop-up/play-header-left.png</code>
+                      </div>
+                      <p class="caption">영업 헤더 왼쪽 화면</p>
                     </div>
-                    <p class="caption">영업 헤더 설명 화면</p>
+                    <div>
+                      <div
+                        class="placeholder-shot compact"
+                        aria-label="Bubble POP-UP 영업 헤더 가운데 이미지 자리"
+                      >
+                        <strong>이미지 준비 중</strong>
+                        <span>헤더 가운데 영역 캡처를 여기에 추가할 수 있습니다.</span>
+                        <code>images/bubble-pop-up/play-header-mid.png</code>
+                      </div>
+                      <p class="caption">영업 헤더 가운데 화면</p>
+                    </div>
+                    <div>
+                      <div
+                        class="placeholder-shot compact"
+                        aria-label="Bubble POP-UP 영업 헤더 오른쪽 이미지 자리"
+                      >
+                        <strong>이미지 준비 중</strong>
+                        <span>헤더 오른쪽 영역 캡처를 여기에 추가할 수 있습니다.</span>
+                        <code>images/bubble-pop-up/play-header-right.png</code>
+                      </div>
+                      <p class="caption">영업 헤더 오른쪽 화면</p>
+                    </div>
                   </div>
-                  <div>
-                    <div
-                      class="placeholder-shot"
-                      aria-label="Bubble POP-UP 실시간 랭킹 이미지 자리"
-                    >
-                      <strong>이미지 준비 중</strong>
-                      <span>실시간 랭킹 설명 캡처를 여기에 추가할 수 있습니다.</span>
-                      <code>images/bubble-pop-up/play-ranking.png</code>
+                </div>
+
+                <div class="guide-group">
+                  <h4 class="guide-subtitle">정적 안내 캡처</h4>
+                  <div class="two-grid">
+                    <div>
+                      <div
+                        class="placeholder-shot compact"
+                        aria-label="Bubble POP-UP 실시간 랭킹 이미지 자리"
+                      >
+                        <strong>이미지 준비 중</strong>
+                        <span>실시간 랭킹 설명 캡처를 여기에 추가할 수 있습니다.</span>
+                        <code>images/bubble-pop-up/play-ranking.png</code>
+                      </div>
+                      <p class="caption">실시간 랭킹 설명 화면</p>
                     </div>
-                    <p class="caption">실시간 랭킹 설명 화면</p>
+                    <div>
+                      <div
+                        class="placeholder-shot compact"
+                        aria-label="Bubble POP-UP 이벤트 알림 이미지 자리"
+                      >
+                        <strong>이미지 준비 중</strong>
+                        <span>이벤트 알림 설명 캡처를 여기에 추가할 수 있습니다.</span>
+                        <code>images/bubble-pop-up/play-event-alert.png</code>
+                      </div>
+                      <p class="caption">이벤트 알림 설명 화면</p>
+                    </div>
                   </div>
-                  <div>
-                    <div
-                      class="placeholder-shot"
-                      aria-label="Bubble POP-UP 이벤트 알림 이미지 자리"
-                    >
-                      <strong>이미지 준비 중</strong>
-                      <span>이벤트 알림 설명 캡처를 여기에 추가할 수 있습니다.</span>
-                      <code>images/bubble-pop-up/play-event-alert.png</code>
+                </div>
+
+                <div class="guide-group">
+                  <h4 class="guide-subtitle">액션별 튜토리얼 GIF</h4>
+                  <div class="triple-grid">
+                    <div>
+                      <div
+                        class="placeholder-shot compact"
+                        aria-label="Bubble POP-UP 할인 액션 GIF 자리"
+                      >
+                        <strong>이미지 준비 중</strong>
+                        <span>할인 액션 GIF를 여기에 추가할 수 있습니다.</span>
+                        <code>images/bubble-pop-up/play-action-discount.gif</code>
+                      </div>
+                      <p class="caption">할인 액션 설명 GIF</p>
                     </div>
-                    <p class="caption">이벤트 알림 설명 화면</p>
-                  </div>
-                  <div>
-                    <div
-                      class="placeholder-shot"
-                      aria-label="Bubble POP-UP 액션 설명 이미지 자리"
-                    >
-                      <strong>이미지 준비 중</strong>
-                      <span>액션 설명 캡처를 여기에 추가할 수 있습니다.</span>
-                      <code>images/bubble-pop-up/play-actions.png</code>
+                    <div>
+                      <div
+                        class="placeholder-shot compact"
+                        aria-label="Bubble POP-UP 긴급발주 액션 GIF 자리"
+                      >
+                        <strong>이미지 준비 중</strong>
+                        <span>긴급발주 액션 GIF를 여기에 추가할 수 있습니다.</span>
+                        <code>images/bubble-pop-up/play-action-emergency.gif</code>
+                      </div>
+                      <p class="caption">긴급발주 액션 설명 GIF</p>
                     </div>
-                    <p class="caption">액션 설명 화면</p>
+                    <div>
+                      <div
+                        class="placeholder-shot compact"
+                        aria-label="Bubble POP-UP 홍보 액션 GIF 자리"
+                      >
+                        <strong>이미지 준비 중</strong>
+                        <span>홍보 액션 GIF를 여기에 추가할 수 있습니다.</span>
+                        <code>images/bubble-pop-up/play-action-promotion.gif</code>
+                      </div>
+                      <p class="caption">홍보 액션 설명 GIF</p>
+                    </div>
+                    <div>
+                      <div
+                        class="placeholder-shot compact"
+                        aria-label="Bubble POP-UP 나눔 액션 GIF 자리"
+                      >
+                        <strong>이미지 준비 중</strong>
+                        <span>나눔 액션 GIF를 여기에 추가할 수 있습니다.</span>
+                        <code>images/bubble-pop-up/play-action-share.gif</code>
+                      </div>
+                      <p class="caption">나눔 액션 설명 GIF</p>
+                    </div>
+                    <div>
+                      <div
+                        class="placeholder-shot compact"
+                        aria-label="Bubble POP-UP 팝업이전 액션 GIF 자리"
+                      >
+                        <strong>이미지 준비 중</strong>
+                        <span>팝업이전 액션 GIF를 여기에 추가할 수 있습니다.</span>
+                        <code>images/bubble-pop-up/play-action-move.gif</code>
+                      </div>
+                      <p class="caption">팝업이전 액션 설명 GIF</p>
+                    </div>
                   </div>
                 </div>
               </div>
