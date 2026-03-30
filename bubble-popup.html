@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble POP-UP | 프로젝트 스크린샷</title>
+    <meta
+      name="description"
+      content="Bubble POP-UP 프로젝트의 주요 기능과 화면을 정리한 스크린샷 페이지입니다."
+    />
+    <style>
+      :root {
+        --bg: #f5f8fc;
+        --card: #ffffff;
+        --text: #1f2430;
+        --muted: #6b7280;
+        --primary: #123b63;
+        --accent: #4db7ff;
+        --border: #e5e7eb;
+        --shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+        --radius: 20px;
+        --max-width: 1180px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: #fff;
+      }
+
+      .container {
+        width: min(var(--max-width), calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .hero {
+        background:
+          linear-gradient(
+            135deg,
+            rgba(18, 59, 99, 0.96),
+            rgba(77, 183, 255, 0.84)
+          ),
+          url("images/bg_2.png") center/cover no-repeat;
+        color: #fff;
+        padding: 88px 0 72px;
+      }
+
+      .hero-inner {
+        max-width: 860px;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        margin: 0 0 16px;
+        font-size: clamp(34px, 5vw, 54px);
+        line-height: 1.15;
+        letter-spacing: -0.03em;
+      }
+
+      .hero p {
+        margin: 0;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .hero-actions {
+        margin-top: 28px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 13px 18px;
+        border-radius: 12px;
+        font-weight: 700;
+        transition: 0.2s ease;
+        border: 1px solid transparent;
+      }
+
+      .btn-primary {
+        background: #fff;
+        color: var(--primary);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn-outline {
+        border-color: rgba(255, 255, 255, 0.35);
+        color: #fff;
+        background: transparent;
+      }
+
+      .btn-outline:hover {
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .section-header {
+        margin-bottom: 28px;
+      }
+
+      .section-title {
+        margin: 0 0 10px;
+        font-size: clamp(28px, 4vw, 38px);
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+      }
+
+      .section-desc {
+        margin: 0;
+        color: var(--muted);
+        font-size: 17px;
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 32px;
+      }
+
+      .summary-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 24px;
+      }
+
+      .summary-card h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+
+      .summary-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .feature-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .feature-item {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 18px 20px;
+        font-weight: 600;
+        color: #374151;
+        box-shadow: var(--shadow);
+      }
+
+      .gallery {
+        display: grid;
+        gap: 24px;
+        margin-top: 30px;
+      }
+
+      .shot-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .shot-content {
+        padding: 24px;
+      }
+
+      .shot-kicker {
+        display: inline-block;
+        margin-bottom: 10px;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: #e0f2fe;
+        color: #0b5cab;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .shot-title {
+        margin: 0 0 8px;
+        font-size: clamp(24px, 3vw, 32px);
+        line-height: 1.25;
+        letter-spacing: -0.02em;
+      }
+
+      .shot-desc {
+        margin: 0 0 18px;
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .shot-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: #f3f4f6;
+        color: #4b5563;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .two-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+
+      .single-shot img,
+      .two-grid img {
+        width: 100%;
+      }
+
+      .placeholder-shot {
+        min-height: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 24px;
+        border-radius: 16px;
+        border: 1px dashed #b9d8f2;
+        background:
+          radial-gradient(circle at top, rgba(77, 183, 255, 0.16), transparent 48%),
+          linear-gradient(135deg, #f7fbff, #edf7ff);
+        text-align: center;
+      }
+
+      .placeholder-shot strong {
+        font-size: 22px;
+        line-height: 1.3;
+        letter-spacing: -0.02em;
+        color: var(--primary);
+      }
+
+      .placeholder-shot span {
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .placeholder-shot code {
+        font-size: 13px;
+        color: #2563eb;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid #dbeafe;
+      }
+
+      .caption {
+        margin-top: 10px;
+        font-size: 14px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .toc {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(12px);
+        background: rgba(245, 248, 252, 0.85);
+        border-bottom: 1px solid rgba(229, 231, 235, 0.9);
+      }
+
+      .toc-inner {
+        width: min(var(--max-width), calc(100% - 32px));
+        margin: 0 auto;
+        display: flex;
+        gap: 12px;
+        padding: 14px 0;
+        overflow-x: auto;
+      }
+
+      .toc a {
+        white-space: nowrap;
+        font-size: 14px;
+        font-weight: 700;
+        color: #4b5563;
+        background: #fff;
+        border: 1px solid var(--border);
+        padding: 10px 14px;
+        border-radius: 999px;
+      }
+
+      .footer {
+        padding: 40px 0 60px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 960px) {
+        .summary-grid,
+        .feature-list,
+        .two-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding: 72px 0 56px;
+        }
+
+        .shot-content {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <span class="badge">SSAFY 팀 프로젝트</span>
+          <h1>Bubble POP-UP</h1>
+          <p>
+            서울시 실제 데이터를 활용한 팝업스토어 경영 시뮬레이션 게임입니다.
+            서울 8개 상권의 유동인구, 임대료, 교통, 뉴스 데이터를 기반으로
+            지역을 선택하고, 메뉴와 가격을 결정하며, 실시간 영업과 시즌 랭킹까지
+            연결되는 흐름으로 구성했습니다.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="index.html#projects-section"
+              >포트폴리오로 돌아가기</a
+            >
+            <a class="btn btn-outline" href="#screens">스크린샷 보기</a>
+          </div>
+        </div>
+
+        <div class="summary-grid">
+          <div class="summary-card">
+            <h3>핵심 목표</h3>
+            <p>
+              실제 도시 데이터를 게임의 의사결정 요소로 변환해 입지 선택과 운영
+              전략이 결과에 반영되는 경영 시뮬레이션 구현
+            </p>
+          </div>
+          <div class="summary-card">
+            <h3>주요 기술</h3>
+            <p>
+              Spring Boot, React, TypeScript, MySQL, Redis, HDFS, Three.js,
+              Unity WebGL
+            </p>
+          </div>
+          <div class="summary-card">
+            <h3>주요 기능</h3>
+            <p>
+              3D 서울 지도, 버블 뉴스, 영업 준비와 발주, 5종 액션, 일일
+              리포트, 시즌 랭킹
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="toc">
+      <div class="toc-inner">
+        <a href="#overview">프로젝트 개요</a>
+        <a href="#dashboard">대시보드</a>
+        <a href="#location">지역 선택</a>
+        <a href="#prep-news">영업 준비 / 뉴스</a>
+        <a href="#play">실시간 영업</a>
+        <a href="#report">일일 리포트</a>
+        <a href="#ranking">시즌 랭킹</a>
+        <a href="#mypage">마이페이지</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="section" id="overview">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">프로젝트 개요</h2>
+            <p class="section-desc">
+              Bubble POP-UP은 서울시 실제 데이터를 바탕으로 팝업스토어 운영
+              전략을 체험할 수 있도록 설계한 시뮬레이션 게임입니다. 사용자는
+              상권을 선택하고, 메뉴와 가격을 정하고, 영업 중 액션을 실행하며,
+              시즌 종료 후 ROI 기반 랭킹으로 결과를 확인할 수 있습니다.
+            </p>
+          </div>
+
+          <div class="feature-list">
+            <div class="feature-item">
+              🏪 시즌 상태와 참가 현황을 보여주는 메인 대시보드
+            </div>
+            <div class="feature-item">
+              🗺️ 홍대, 여의도, 명동, 이태원, 서울숲/성수, 신도림, 강남, 잠실
+              기반 지역 선택
+            </div>
+            <div class="feature-item">
+              📰 유동인구 순위와 뉴스 이벤트를 결합한 버블 뉴스
+            </div>
+            <div class="feature-item">
+              📦 영업일별 메뉴, 가격, 수량을 설정하는 준비 및 발주 시스템
+            </div>
+            <div class="feature-item">
+              🎮 할인, 긴급발주, 홍보, 나눔, 팝업이전 5종 액션이 포함된 실시간
+              영업 화면
+            </div>
+            <div class="feature-item">
+              📊 매출, 비용, 평판, 재고 흐름을 확인하는 일일 리포트와 시즌 랭킹
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="screens">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">주요 화면</h2>
+            <p class="section-desc">
+              게임의 주요 흐름을 이해할 수 있도록 핵심 화면 중심으로 정리했습니다.
+              이미지는 추후 추가할 수 있도록 비워두었습니다.
+            </p>
+          </div>
+
+          <div class="gallery">
+            <article class="shot-card" id="dashboard">
+              <div class="shot-content">
+                <span class="shot-kicker">🏪 메인 대시보드</span>
+                <h3 class="shot-title">
+                  시즌 상태와 참가 흐름을 보여주는 메인 대시보드
+                </h3>
+                <p class="shot-desc">
+                  시즌 시작 전 대기 상태, 참가 현황, 선택한 아이템, 상위 랭킹
+                  정보를 한 화면에서 확인할 수 있도록 구성한 진입 화면입니다.
+                  플레이 중에는 현재 페이즈에 맞는 화면으로 자연스럽게 이어지도록
+                  흐름을 설계했습니다.
+                </p>
+                <div class="shot-tags">
+                  <span class="tag">시즌 대기</span>
+                  <span class="tag">참가 현황</span>
+                  <span class="tag">아이템 선택</span>
+                  <span class="tag">상위 랭킹</span>
+                </div>
+
+                <div class="single-shot">
+                  <div
+                    class="placeholder-shot"
+                    aria-label="Bubble POP-UP 메인 대시보드 이미지 자리"
+                  >
+                    <strong>이미지 준비 중</strong>
+                    <span>메인 대시보드 화면을 여기에 추가할 수 있습니다.</span>
+                    <code>images/bubble-pop-up/dashboard.png</code>
+                  </div>
+                  <p class="caption">메인 대시보드 화면</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="shot-card" id="location">
+              <div class="shot-content">
+                <span class="shot-kicker">🗺️ 지역 선택</span>
+                <h3 class="shot-title">
+                  3D 서울 지도에서 상권을 비교하고 지역을 선택하는 화면
+                </h3>
+                <p class="shot-desc">
+                  홍대, 여의도, 명동, 이태원, 서울숲/성수, 신도림, 강남, 잠실의
+                  상권 정보를 비교하면서 일일 임대료, 유동인구 순위, 인테리어
+                  비용을 확인하고, 선택한 지역에 맞는 팝업 브랜드명을 설정하는
+                  흐름입니다.
+                </p>
+                <div class="shot-tags">
+                  <span class="tag">3D 서울 지도</span>
+                  <span class="tag">상권 비교</span>
+                  <span class="tag">브랜드명 설정</span>
+                  <span class="tag">서울 8개 상권</span>
+                </div>
+
+                <div class="single-shot">
+                  <div
+                    class="placeholder-shot"
+                    aria-label="Bubble POP-UP 지역 선택 이미지 자리"
+                  >
+                    <strong>이미지 준비 중</strong>
+                    <span>
+                      지역 선택과 브랜드명 입력 화면을 여기에 추가할 수 있습니다.
+                    </span>
+                    <code>images/bubble-pop-up/location-select.png</code>
+                  </div>
+                  <p class="caption">지역 선택 및 브랜드명 설정 화면</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="shot-card" id="prep-news">
+              <div class="shot-content">
+                <span class="shot-kicker">📰 영업 준비 / 버블 뉴스</span>
+                <h3 class="shot-title">
+                  영업 준비와 버블 뉴스를 함께 보는 의사결정 화면
+                </h3>
+                <p class="shot-desc">
+                  영업 준비 단계에서 메뉴, 판매가, 발주 수량을 정하고 다음 영업을
+                  준비할 수 있습니다. 동시에 버블 뉴스 영역에서는 유동인구 순위와
+                  뉴스 이벤트를 확인해 어떤 전략이 유리한지 판단할 수 있도록
+                  구성했습니다.
+                </p>
+                <div class="shot-tags">
+                  <span class="tag">메뉴 선택</span>
+                  <span class="tag">가격 설정</span>
+                  <span class="tag">정규 발주</span>
+                  <span class="tag">버블 뉴스</span>
+                  <span class="tag">유동인구 순위</span>
+                </div>
+
+                <div class="two-grid">
+                  <div>
+                    <div
+                      class="placeholder-shot"
+                      aria-label="Bubble POP-UP 영업 준비 이미지 자리"
+                    >
+                      <strong>이미지 준비 중</strong>
+                      <span>영업 준비 화면을 여기에 추가할 수 있습니다.</span>
+                      <code>images/bubble-pop-up/prep.png</code>
+                    </div>
+                    <p class="caption">메뉴, 가격, 발주 수량을 정하는 영업 준비 화면</p>
+                  </div>
+                  <div>
+                    <div
+                      class="placeholder-shot"
+                      aria-label="Bubble POP-UP 버블 뉴스 이미지 자리"
+                    >
+                      <strong>이미지 준비 중</strong>
+                      <span>버블 뉴스 화면을 여기에 추가할 수 있습니다.</span>
+                      <code>images/bubble-pop-up/bubble-news.png</code>
+                    </div>
+                    <p class="caption">뉴스 이벤트와 순위를 확인하는 버블 뉴스 화면</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="shot-card" id="play">
+              <div class="shot-content">
+                <span class="shot-kicker">🎮 실시간 영업</span>
+                <h3 class="shot-title">
+                  실시간 상황에 맞춰 5종 액션을 실행하는 플레이 화면
+                </h3>
+                <p class="shot-desc">
+                  Unity WebGL 기반 배경과 함께 손님 수, 재고, 잔액, 이벤트 알림을
+                  실시간으로 확인하면서 할인, 긴급발주, 홍보, 나눔, 팝업이전 중
+                  필요한 액션을 선택할 수 있도록 설계한 핵심 플레이 화면입니다.
+                </p>
+                <div class="shot-tags">
+                  <span class="tag">Unity WebGL</span>
+                  <span class="tag">할인</span>
+                  <span class="tag">긴급발주</span>
+                  <span class="tag">홍보</span>
+                  <span class="tag">나눔</span>
+                  <span class="tag">팝업이전</span>
+                </div>
+
+                <div class="single-shot">
+                  <div
+                    class="placeholder-shot"
+                    aria-label="Bubble POP-UP 실시간 영업 이미지 자리"
+                  >
+                    <strong>이미지 준비 중</strong>
+                    <span>실시간 영업 화면을 여기에 추가할 수 있습니다.</span>
+                    <code>images/bubble-pop-up/play.png</code>
+                  </div>
+                  <p class="caption">실시간 영업 및 액션 실행 화면</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="shot-card" id="report">
+              <div class="shot-content">
+                <span class="shot-kicker">📊 일일 리포트</span>
+                <h3 class="shot-title">
+                  하루 운영 결과를 매출과 비용 중심으로 정리하는 리포트 화면
+                </h3>
+                <p class="shot-desc">
+                  영업이 끝난 뒤 매출, 총비용, 순이익, 평판, 재고 상태를 한 번에
+                  확인할 수 있으며, 누적 수익 차트와 날씨 정보까지 함께 보여주어
+                  다음 날 전략을 세우는 기준이 되도록 구성했습니다.
+                </p>
+                <div class="shot-tags">
+                  <span class="tag">매출 분석</span>
+                  <span class="tag">순이익 차트</span>
+                  <span class="tag">평판</span>
+                  <span class="tag">파산 경고</span>
+                  <span class="tag">날씨 정보</span>
+                </div>
+
+                <div class="single-shot">
+                  <div
+                    class="placeholder-shot"
+                    aria-label="Bubble POP-UP 일일 리포트 이미지 자리"
+                  >
+                    <strong>이미지 준비 중</strong>
+                    <span>일일 리포트 화면을 여기에 추가할 수 있습니다.</span>
+                    <code>images/bubble-pop-up/report.png</code>
+                  </div>
+                  <p class="caption">일일 리포트 화면</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="shot-card" id="ranking">
+              <div class="shot-content">
+                <span class="shot-kicker">🏆 시즌 랭킹</span>
+                <h3 class="shot-title">
+                  시즌 종료 후 ROI 기준으로 순위를 보여주는 랭킹 화면
+                </h3>
+                <p class="shot-desc">
+                  포디움, 랭킹 리스트, 파산 매장 구분, 개인 기록을 함께 제공해
+                  시즌 결과를 직관적으로 확인할 수 있도록 구성했습니다. 경쟁
+                  구조와 보상 흐름이 한 화면에서 정리되는 마무리 단계입니다.
+                </p>
+                <div class="shot-tags">
+                  <span class="tag">포디움</span>
+                  <span class="tag">최종 순위</span>
+                  <span class="tag">파산 매장</span>
+                  <span class="tag">나의 기록</span>
+                </div>
+
+                <div class="single-shot">
+                  <div
+                    class="placeholder-shot"
+                    aria-label="Bubble POP-UP 시즌 랭킹 이미지 자리"
+                  >
+                    <strong>이미지 준비 중</strong>
+                    <span>시즌 랭킹 화면을 여기에 추가할 수 있습니다.</span>
+                    <code>images/bubble-pop-up/ranking.png</code>
+                  </div>
+                  <p class="caption">시즌 랭킹 화면</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="shot-card" id="mypage">
+              <div class="shot-content">
+                <span class="shot-kicker">👤 마이페이지</span>
+                <h3 class="shot-title">
+                  시즌별 운영 기록을 다시 확인하는 마이페이지 화면
+                </h3>
+                <p class="shot-desc">
+                  닉네임 정보와 함께 참여 시즌 수, 최고 순위, 시즌별 수익 기록을
+                  모아볼 수 있는 화면입니다. 위치나 가게 이름으로 기록을 검색하고
+                  정렬할 수 있어 플레이 히스토리를 복기하기 좋도록 설계했습니다.
+                </p>
+                <div class="shot-tags">
+                  <span class="tag">시즌 히스토리</span>
+                  <span class="tag">닉네임 수정</span>
+                  <span class="tag">통산 기록</span>
+                  <span class="tag">검색 / 정렬</span>
+                </div>
+
+                <div class="single-shot">
+                  <div
+                    class="placeholder-shot"
+                    aria-label="Bubble POP-UP 마이페이지 이미지 자리"
+                  >
+                    <strong>이미지 준비 중</strong>
+                    <span>마이페이지 화면을 여기에 추가할 수 있습니다.</span>
+                    <code>images/bubble-pop-up/mypage.png</code>
+                  </div>
+                  <p class="caption">마이페이지 및 시즌 기록 화면</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 박솔희 Portfolio - Bubble POP-UP Project Screens</p>
+      </div>
+    </footer>
+  </body>
+</html>
