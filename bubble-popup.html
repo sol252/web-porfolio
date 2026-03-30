@@ -266,6 +266,12 @@
         gap: 18px;
       }
 
+      .quad-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+
       .single-shot img,
       .two-grid img {
         width: 100%;
@@ -354,7 +360,8 @@
       @media (max-width: 960px) {
         .summary-grid,
         .feature-list,
-        .two-grid {
+        .two-grid,
+        .quad-grid {
           grid-template-columns: 1fr;
         }
 
@@ -423,6 +430,7 @@
         <a href="#location">지역 선택</a>
         <a href="#prep-news">영업 준비 / 뉴스</a>
         <a href="#play">실시간 영업</a>
+        <a href="#play-guide">영업 중 UI</a>
         <a href="#report">일일 리포트</a>
         <a href="#ranking">시즌 랭킹</a>
         <a href="#mypage">마이페이지</a>
@@ -504,7 +512,7 @@
                   >
                     <strong>이미지 준비 중</strong>
                     <span>메인 대시보드 화면을 여기에 추가할 수 있습니다.</span>
-                    <code>images/bubble-pop-up/dashboard.png</code>
+                    <code>images/bubble-pop-up/dashboard.gif</code>
                   </div>
                   <p class="caption">메인 대시보드 화면</p>
                 </div>
@@ -539,7 +547,7 @@
                     <span>
                       지역 선택과 브랜드명 입력 화면을 여기에 추가할 수 있습니다.
                     </span>
-                    <code>images/bubble-pop-up/location-select.png</code>
+                    <code>images/bubble-pop-up/location-select.gif</code>
                   </div>
                   <p class="caption">지역 선택 및 브랜드명 설정 화면</p>
                 </div>
@@ -574,7 +582,7 @@
                     >
                       <strong>이미지 준비 중</strong>
                       <span>영업 준비 화면을 여기에 추가할 수 있습니다.</span>
-                      <code>images/bubble-pop-up/prep.png</code>
+                      <code>images/bubble-pop-up/prep.gif</code>
                     </div>
                     <p class="caption">메뉴, 가격, 발주 수량을 정하는 영업 준비 화면</p>
                   </div>
@@ -585,7 +593,7 @@
                     >
                       <strong>이미지 준비 중</strong>
                       <span>버블 뉴스 화면을 여기에 추가할 수 있습니다.</span>
-                      <code>images/bubble-pop-up/bubble-news.png</code>
+                      <code>images/bubble-pop-up/bubble-news.gif</code>
                     </div>
                     <p class="caption">뉴스 이벤트와 순위를 확인하는 버블 뉴스 화면</p>
                   </div>
@@ -606,6 +614,7 @@
                 </p>
                 <div class="shot-tags">
                   <span class="tag">Unity WebGL</span>
+                  <span class="tag">메인 플레이 GIF</span>
                   <span class="tag">할인</span>
                   <span class="tag">긴급발주</span>
                   <span class="tag">홍보</span>
@@ -620,9 +629,77 @@
                   >
                     <strong>이미지 준비 중</strong>
                     <span>실시간 영업 화면을 여기에 추가할 수 있습니다.</span>
-                    <code>images/bubble-pop-up/play.png</code>
+                    <code>images/bubble-pop-up/play.gif</code>
                   </div>
                   <p class="caption">실시간 영업 및 액션 실행 화면</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="shot-card" id="play-guide">
+              <div class="shot-content">
+                <span class="shot-kicker">🧭 영업 중 UI 가이드</span>
+                <h3 class="shot-title">
+                  튜토리얼 캡처를 정적으로 정리할 수 있는 영업 중 상세 UI 섹션
+                </h3>
+                <p class="shot-desc">
+                  프론트엔드 튜토리얼에 들어 있는 설명 화면을 캡처해 넣기 쉽도록
+                  영업 중 UI를 세부 영역으로 분리했습니다. 이 구간은 움직이는 GIF
+                  대신 정적인 PNG 또는 JPG 캡처를 넣는 용도로 구성했습니다.
+                </p>
+                <div class="shot-tags">
+                  <span class="tag">헤더 설명</span>
+                  <span class="tag">실시간 랭킹</span>
+                  <span class="tag">이벤트 알림</span>
+                  <span class="tag">액션 설명</span>
+                  <span class="tag">정적 캡처 PNG/JPG</span>
+                </div>
+
+                <div class="quad-grid">
+                  <div>
+                    <div
+                      class="placeholder-shot"
+                      aria-label="Bubble POP-UP 영업 헤더 설명 이미지 자리"
+                    >
+                      <strong>이미지 준비 중</strong>
+                      <span>영업 헤더 설명 캡처를 여기에 추가할 수 있습니다.</span>
+                      <code>images/bubble-pop-up/play-header.png</code>
+                    </div>
+                    <p class="caption">영업 헤더 설명 화면</p>
+                  </div>
+                  <div>
+                    <div
+                      class="placeholder-shot"
+                      aria-label="Bubble POP-UP 실시간 랭킹 이미지 자리"
+                    >
+                      <strong>이미지 준비 중</strong>
+                      <span>실시간 랭킹 설명 캡처를 여기에 추가할 수 있습니다.</span>
+                      <code>images/bubble-pop-up/play-ranking.png</code>
+                    </div>
+                    <p class="caption">실시간 랭킹 설명 화면</p>
+                  </div>
+                  <div>
+                    <div
+                      class="placeholder-shot"
+                      aria-label="Bubble POP-UP 이벤트 알림 이미지 자리"
+                    >
+                      <strong>이미지 준비 중</strong>
+                      <span>이벤트 알림 설명 캡처를 여기에 추가할 수 있습니다.</span>
+                      <code>images/bubble-pop-up/play-event-alert.png</code>
+                    </div>
+                    <p class="caption">이벤트 알림 설명 화면</p>
+                  </div>
+                  <div>
+                    <div
+                      class="placeholder-shot"
+                      aria-label="Bubble POP-UP 액션 설명 이미지 자리"
+                    >
+                      <strong>이미지 준비 중</strong>
+                      <span>액션 설명 캡처를 여기에 추가할 수 있습니다.</span>
+                      <code>images/bubble-pop-up/play-actions.png</code>
+                    </div>
+                    <p class="caption">액션 설명 화면</p>
+                  </div>
                 </div>
               </div>
             </article>
@@ -653,7 +730,7 @@
                   >
                     <strong>이미지 준비 중</strong>
                     <span>일일 리포트 화면을 여기에 추가할 수 있습니다.</span>
-                    <code>images/bubble-pop-up/report.png</code>
+                    <code>images/bubble-pop-up/report.gif</code>
                   </div>
                   <p class="caption">일일 리포트 화면</p>
                 </div>
@@ -685,7 +762,7 @@
                   >
                     <strong>이미지 준비 중</strong>
                     <span>시즌 랭킹 화면을 여기에 추가할 수 있습니다.</span>
-                    <code>images/bubble-pop-up/ranking.png</code>
+                    <code>images/bubble-pop-up/ranking.gif</code>
                   </div>
                   <p class="caption">시즌 랭킹 화면</p>
                 </div>
@@ -717,7 +794,7 @@
                   >
                     <strong>이미지 준비 중</strong>
                     <span>마이페이지 화면을 여기에 추가할 수 있습니다.</span>
-                    <code>images/bubble-pop-up/mypage.png</code>
+                    <code>images/bubble-pop-up/mypage.gif</code>
                   </div>
                   <p class="caption">마이페이지 및 시즌 기록 화면</p>
                 </div>
