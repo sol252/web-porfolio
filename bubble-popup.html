@@ -278,50 +278,22 @@
         gap: 18px;
       }
 
-      .single-shot img,
-      .two-grid img {
-        width: 100%;
-      }
-
-      .placeholder-shot {
+      .media-shell {
         min-height: 320px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        padding: 24px;
         border-radius: 16px;
-        border: 1px dashed #b9d8f2;
-        background:
-          radial-gradient(circle at top, rgba(77, 183, 255, 0.16), transparent 48%),
-          linear-gradient(135deg, #f7fbff, #edf7ff);
-        text-align: center;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        background: linear-gradient(135deg, #f7fbff, #edf7ff);
       }
-
-      .placeholder-shot.compact {
+      .media-shell.compact {
         min-height: 240px;
       }
-
-      .placeholder-shot strong {
-        font-size: 22px;
-        line-height: 1.3;
-        letter-spacing: -0.02em;
-        color: var(--primary);
-      }
-
-      .placeholder-shot span {
-        font-size: 14px;
-        color: var(--muted);
-      }
-
-      .placeholder-shot code {
-        font-size: 13px;
-        color: #2563eb;
-        background: rgba(255, 255, 255, 0.9);
-        padding: 6px 10px;
-        border-radius: 999px;
-        border: 1px solid #dbeafe;
+      .media-shell img {
+        width: 100%;
+        height: auto;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
       }
 
       .caption {
@@ -528,14 +500,14 @@
                   <span class="tag">상위 랭킹</span>
                 </div>
 
-                <div class="single-shot">
-                  <div
-                    class="placeholder-shot"
-                    aria-label="Bubble POP-UP 메인 대시보드 이미지 자리"
-                  >
-                    <strong>이미지 준비 중</strong>
-                    <span>메인 대시보드 화면을 여기에 추가할 수 있습니다.</span>
-                    <code>images/bubble-pop-up/dashboard.png</code>
+                <div class="single-shot media-card">
+                  <div class="media-shell">
+                    <img
+                      src="images/bubble-pop-up/dashboard.png"
+                      alt="Bubble POP-UP dashboard screen"
+                      loading="lazy"
+                      onerror="this.closest('.media-card').remove()"
+                    />
                   </div>
                   <p class="caption">메인 대시보드 화면</p>
                 </div>
@@ -561,16 +533,14 @@
                   <span class="tag">서울 8개 상권</span>
                 </div>
 
-                <div class="single-shot">
-                  <div
-                    class="placeholder-shot"
-                    aria-label="Bubble POP-UP 지역 선택 이미지 자리"
-                  >
-                    <strong>이미지 준비 중</strong>
-                    <span>
-                      지역 선택과 브랜드명 입력 화면을 여기에 추가할 수 있습니다.
-                    </span>
-                    <code>images/bubble-pop-up/location-select.gif</code>
+                <div class="single-shot media-card">
+                  <div class="media-shell">
+                    <img
+                      src="images/bubble-pop-up/location-select.gif"
+                      alt="Bubble POP-UP location selection flow"
+                      loading="lazy"
+                      onerror="this.closest('.media-card').remove()"
+                    />
                   </div>
                   <p class="caption">지역 선택 및 브랜드명 설정 화면</p>
                 </div>
@@ -598,26 +568,26 @@
                 </div>
 
                 <div class="two-grid">
-                  <div>
-                    <div
-                      class="placeholder-shot"
-                      aria-label="Bubble POP-UP 영업 준비 이미지 자리"
-                    >
-                      <strong>이미지 준비 중</strong>
-                      <span>영업 준비 화면을 여기에 추가할 수 있습니다.</span>
-                      <code>images/bubble-pop-up/prep.gif</code>
-                    </div>
+                  <div class="media-card">
+                      <div class="media-shell">
+                        <img
+                          src="images/bubble-pop-up/prep.gif"
+                          alt="Bubble POP-UP preparation flow"
+                          loading="lazy"
+                          onerror="this.closest('.media-card').remove()"
+                        />
+                      </div>
                     <p class="caption">메뉴, 가격, 발주 수량을 정하는 영업 준비 화면</p>
                   </div>
-                  <div>
-                    <div
-                      class="placeholder-shot"
-                      aria-label="Bubble POP-UP 버블 뉴스 이미지 자리"
-                    >
-                      <strong>이미지 준비 중</strong>
-                      <span>버블 뉴스 화면을 여기에 추가할 수 있습니다.</span>
-                      <code>images/bubble-pop-up/bubble-news.gif</code>
-                    </div>
+                  <div class="media-card">
+                      <div class="media-shell">
+                        <img
+                          src="images/bubble-pop-up/bubble-news.gif"
+                          alt="Bubble POP-UP bubble news screen"
+                          loading="lazy"
+                          onerror="this.closest('.media-card').remove()"
+                        />
+                      </div>
                     <p class="caption">뉴스 이벤트와 순위를 확인하는 버블 뉴스 화면</p>
                   </div>
                 </div>
@@ -645,14 +615,14 @@
                   <span class="tag">팝업이전</span>
                 </div>
 
-                <div class="single-shot">
-                  <div
-                    class="placeholder-shot"
-                    aria-label="Bubble POP-UP 실시간 영업 이미지 자리"
-                  >
-                    <strong>이미지 준비 중</strong>
-                    <span>실시간 영업 화면을 여기에 추가할 수 있습니다.</span>
-                    <code>images/bubble-pop-up/play.gif</code>
+                <div class="single-shot media-card">
+                  <div class="media-shell">
+                    <img
+                      src="images/bubble-pop-up/play.gif"
+                      alt="Bubble POP-UP live play screen"
+                      loading="lazy"
+                      onerror="this.closest('.media-card').remove()"
+                    />
                   </div>
                   <p class="caption">실시간 영업 및 액션 실행 화면</p>
                 </div>
@@ -682,36 +652,36 @@
                 <div class="guide-group">
                   <h4 class="guide-subtitle">헤더 3분할 캡처</h4>
                   <div class="triple-grid">
-                    <div>
-                      <div
-                        class="placeholder-shot compact"
-                        aria-label="Bubble POP-UP 영업 헤더 왼쪽 이미지 자리"
-                      >
-                        <strong>이미지 준비 중</strong>
-                        <span>헤더 왼쪽 영역 캡처를 여기에 추가할 수 있습니다.</span>
-                        <code>images/bubble-pop-up/play-header-left.png</code>
+                    <div class="media-card">
+                      <div class="media-shell compact">
+                        <img
+                          src="images/bubble-pop-up/play-header-left.png"
+                          alt="Bubble POP-UP play header left panel"
+                          loading="lazy"
+                          onerror="this.closest('.media-card').remove()"
+                        />
                       </div>
                       <p class="caption">영업 헤더 왼쪽 화면</p>
                     </div>
-                    <div>
-                      <div
-                        class="placeholder-shot compact"
-                        aria-label="Bubble POP-UP 영업 헤더 가운데 이미지 자리"
-                      >
-                        <strong>이미지 준비 중</strong>
-                        <span>헤더 가운데 영역 캡처를 여기에 추가할 수 있습니다.</span>
-                        <code>images/bubble-pop-up/play-header-mid.png</code>
+                    <div class="media-card">
+                      <div class="media-shell compact">
+                        <img
+                          src="images/bubble-pop-up/play-header-mid.png"
+                          alt="Bubble POP-UP play header center panel"
+                          loading="lazy"
+                          onerror="this.closest('.media-card').remove()"
+                        />
                       </div>
                       <p class="caption">영업 헤더 가운데 화면</p>
                     </div>
-                    <div>
-                      <div
-                        class="placeholder-shot compact"
-                        aria-label="Bubble POP-UP 영업 헤더 오른쪽 이미지 자리"
-                      >
-                        <strong>이미지 준비 중</strong>
-                        <span>헤더 오른쪽 영역 캡처를 여기에 추가할 수 있습니다.</span>
-                        <code>images/bubble-pop-up/play-header-right.png</code>
+                    <div class="media-card">
+                      <div class="media-shell compact">
+                        <img
+                          src="images/bubble-pop-up/play-header-right.png"
+                          alt="Bubble POP-UP play header right panel"
+                          loading="lazy"
+                          onerror="this.closest('.media-card').remove()"
+                        />
                       </div>
                       <p class="caption">영업 헤더 오른쪽 화면</p>
                     </div>
@@ -721,25 +691,25 @@
                 <div class="guide-group">
                   <h4 class="guide-subtitle">정적 안내 캡처</h4>
                   <div class="two-grid">
-                    <div>
-                      <div
-                        class="placeholder-shot compact"
-                        aria-label="Bubble POP-UP 실시간 랭킹 이미지 자리"
-                      >
-                        <strong>이미지 준비 중</strong>
-                        <span>실시간 랭킹 설명 캡처를 여기에 추가할 수 있습니다.</span>
-                        <code>images/bubble-pop-up/play-ranking.png</code>
+                    <div class="media-card">
+                      <div class="media-shell compact">
+                        <img
+                          src="images/bubble-pop-up/play-ranking.png"
+                          alt="Bubble POP-UP play ranking guide"
+                          loading="lazy"
+                          onerror="this.closest('.media-card').remove()"
+                        />
                       </div>
                       <p class="caption">실시간 랭킹 설명 화면</p>
                     </div>
-                    <div>
-                      <div
-                        class="placeholder-shot compact"
-                        aria-label="Bubble POP-UP 이벤트 알림 이미지 자리"
-                      >
-                        <strong>이미지 준비 중</strong>
-                        <span>이벤트 알림 설명 캡처를 여기에 추가할 수 있습니다.</span>
-                        <code>images/bubble-pop-up/play-event-alert.png</code>
+                    <div class="media-card">
+                      <div class="media-shell compact">
+                        <img
+                          src="images/bubble-pop-up/play-event-alert.png"
+                          alt="Bubble POP-UP play event alert guide"
+                          loading="lazy"
+                          onerror="this.closest('.media-card').remove()"
+                        />
                       </div>
                       <p class="caption">이벤트 알림 설명 화면</p>
                     </div>
@@ -749,58 +719,58 @@
                 <div class="guide-group">
                   <h4 class="guide-subtitle">액션별 튜토리얼 GIF</h4>
                   <div class="triple-grid">
-                    <div>
-                      <div
-                        class="placeholder-shot compact"
-                        aria-label="Bubble POP-UP 할인 액션 GIF 자리"
-                      >
-                        <strong>이미지 준비 중</strong>
-                        <span>할인 액션 GIF를 여기에 추가할 수 있습니다.</span>
-                        <code>images/bubble-pop-up/play-action-discount.gif</code>
+                    <div class="media-card">
+                      <div class="media-shell compact">
+                        <img
+                          src="images/bubble-pop-up/play-action-discount.gif"
+                          alt="Bubble POP-UP discount action tutorial"
+                          loading="lazy"
+                          onerror="this.closest('.media-card').remove()"
+                        />
                       </div>
                       <p class="caption">할인 액션 설명 GIF</p>
                     </div>
-                    <div>
-                      <div
-                        class="placeholder-shot compact"
-                        aria-label="Bubble POP-UP 긴급발주 액션 GIF 자리"
-                      >
-                        <strong>이미지 준비 중</strong>
-                        <span>긴급발주 액션 GIF를 여기에 추가할 수 있습니다.</span>
-                        <code>images/bubble-pop-up/play-action-emergency.gif</code>
+                    <div class="media-card">
+                      <div class="media-shell compact">
+                        <img
+                          src="images/bubble-pop-up/play-action-emergency.gif"
+                          alt="Bubble POP-UP emergency action tutorial"
+                          loading="lazy"
+                          onerror="this.closest('.media-card').remove()"
+                        />
                       </div>
                       <p class="caption">긴급발주 액션 설명 GIF</p>
                     </div>
-                    <div>
-                      <div
-                        class="placeholder-shot compact"
-                        aria-label="Bubble POP-UP 홍보 액션 GIF 자리"
-                      >
-                        <strong>이미지 준비 중</strong>
-                        <span>홍보 액션 GIF를 여기에 추가할 수 있습니다.</span>
-                        <code>images/bubble-pop-up/play-action-promotion.gif</code>
+                    <div class="media-card">
+                      <div class="media-shell compact">
+                        <img
+                          src="images/bubble-pop-up/play-action-promotion.gif"
+                          alt="Bubble POP-UP promotion action tutorial"
+                          loading="lazy"
+                          onerror="this.closest('.media-card').remove()"
+                        />
                       </div>
                       <p class="caption">홍보 액션 설명 GIF</p>
                     </div>
-                    <div>
-                      <div
-                        class="placeholder-shot compact"
-                        aria-label="Bubble POP-UP 나눔 액션 GIF 자리"
-                      >
-                        <strong>이미지 준비 중</strong>
-                        <span>나눔 액션 GIF를 여기에 추가할 수 있습니다.</span>
-                        <code>images/bubble-pop-up/play-action-share.gif</code>
+                    <div class="media-card">
+                      <div class="media-shell compact">
+                        <img
+                          src="images/bubble-pop-up/play-action-share.gif"
+                          alt="Bubble POP-UP share action tutorial"
+                          loading="lazy"
+                          onerror="this.closest('.media-card').remove()"
+                        />
                       </div>
                       <p class="caption">나눔 액션 설명 GIF</p>
                     </div>
-                    <div>
-                      <div
-                        class="placeholder-shot compact"
-                        aria-label="Bubble POP-UP 팝업이전 액션 GIF 자리"
-                      >
-                        <strong>이미지 준비 중</strong>
-                        <span>팝업이전 액션 GIF를 여기에 추가할 수 있습니다.</span>
-                        <code>images/bubble-pop-up/play-action-move.gif</code>
+                    <div class="media-card">
+                      <div class="media-shell compact">
+                        <img
+                          src="images/bubble-pop-up/play-action-move.gif"
+                          alt="Bubble POP-UP move action tutorial"
+                          loading="lazy"
+                          onerror="this.closest('.media-card').remove()"
+                        />
                       </div>
                       <p class="caption">팝업이전 액션 설명 GIF</p>
                     </div>
@@ -828,14 +798,14 @@
                   <span class="tag">날씨 정보</span>
                 </div>
 
-                <div class="single-shot">
-                  <div
-                    class="placeholder-shot"
-                    aria-label="Bubble POP-UP 일일 리포트 이미지 자리"
-                  >
-                    <strong>이미지 준비 중</strong>
-                    <span>일일 리포트 화면을 여기에 추가할 수 있습니다.</span>
-                    <code>images/bubble-pop-up/report.gif</code>
+                <div class="single-shot media-card">
+                  <div class="media-shell">
+                    <img
+                      src="images/bubble-pop-up/report.gif"
+                      alt="Bubble POP-UP report screen"
+                      loading="lazy"
+                      onerror="this.closest('.media-card').remove()"
+                    />
                   </div>
                   <p class="caption">일일 리포트 화면</p>
                 </div>
@@ -860,14 +830,14 @@
                   <span class="tag">나의 기록</span>
                 </div>
 
-                <div class="single-shot">
-                  <div
-                    class="placeholder-shot"
-                    aria-label="Bubble POP-UP 시즌 랭킹 이미지 자리"
-                  >
-                    <strong>이미지 준비 중</strong>
-                    <span>시즌 랭킹 화면을 여기에 추가할 수 있습니다.</span>
-                    <code>images/bubble-pop-up/ranking.gif</code>
+                <div class="single-shot media-card">
+                  <div class="media-shell">
+                    <img
+                      src="images/bubble-pop-up/ranking.gif"
+                      alt="Bubble POP-UP ranking screen"
+                      loading="lazy"
+                      onerror="this.closest('.media-card').remove()"
+                    />
                   </div>
                   <p class="caption">시즌 랭킹 화면</p>
                 </div>
@@ -892,14 +862,14 @@
                   <span class="tag">검색 / 정렬</span>
                 </div>
 
-                <div class="single-shot">
-                  <div
-                    class="placeholder-shot"
-                    aria-label="Bubble POP-UP 마이페이지 이미지 자리"
-                  >
-                    <strong>이미지 준비 중</strong>
-                    <span>마이페이지 화면을 여기에 추가할 수 있습니다.</span>
-                    <code>images/bubble-pop-up/mypage.gif</code>
+                <div class="single-shot media-card">
+                  <div class="media-shell">
+                    <img
+                      src="images/bubble-pop-up/mypage.gif"
+                      alt="Bubble POP-UP my page screen"
+                      loading="lazy"
+                      onerror="this.closest('.media-card').remove()"
+                    />
                   </div>
                   <p class="caption">마이페이지 및 시즌 기록 화면</p>
                 </div>
